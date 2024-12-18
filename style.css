@@ -1,4 +1,3 @@
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -16,9 +15,9 @@ body {
     height: 100vh;
     text-align: center;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
-/* Container */
 .container {
     width: 90%;
     max-width: 1000px;
@@ -27,13 +26,15 @@ body {
     background: linear-gradient(45deg, #FF6347, #FF1493);
     box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 70px;
 }
 
 .container:hover {
     transform: scale(1.03);
 }
 
-/* Header */
 .header {
     margin-bottom: 40px;
 }
@@ -55,7 +56,6 @@ body {
     animation: fadeIn 1.5s ease;
 }
 
-/* Search Section */
 .search-section {
     margin-bottom: 40px;
 }
@@ -93,7 +93,6 @@ button:hover {
     background-color: #FF1493;
 }
 
-/* Definition Card */
 .definition-card {
     background-color: #FFF;
     color: #333;
@@ -131,7 +130,6 @@ button:hover {
     font-style: italic;
 }
 
-/* Footer */
 .footer {
     background-color: #222;
     color: #FFF;
@@ -148,7 +146,6 @@ button:hover {
     font-size: 1.1em;
 }
 
-/* Animations */
 @keyframes bounceIn {
     0% {
         transform: scale(0);
@@ -173,9 +170,6 @@ button:hover {
     }
 }
 
-/* Media Queries for Responsive Design */
-
-/* Between 450px and 380px */
 @media (max-width: 450px) and (min-width: 380px) {
     .title {
         font-size: 2.8em;
@@ -210,7 +204,6 @@ button:hover {
     }
 }
 
-/* For smaller than 380px */
 @media (max-width: 380px) {
     body {
         font-size: 14px;
