@@ -11,7 +11,7 @@ function getWordDefinition() {
     fetch(requestUrl)
         .then((response) => {
             if (!response.ok) {
-                throw new Error(`Something went wrong ${response.status} -> ${response.statusText}`);
+                throw new Error(`Error ${response.status} -> ${response.statusText}`);
             }
             return response.json();
         })
